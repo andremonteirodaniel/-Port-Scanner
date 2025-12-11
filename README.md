@@ -32,14 +32,15 @@ Forneça apenas o host alvo. A lista de portas padrão será utilizada.
 python portscan.py <HOST_ALVO>
 # Exemplo: python portscan.py google.com
 
-### **Detalhes Técnicos Importantes**
-
-* A varredura usa `socket.connect_ex()`. Um retorno de código `0` indica que a porta está aberta.
-* O *timeout* é definido como `0.5` segundos por tentativa.
-* Se nenhuma porta for fornecida, a lista padrão inclui: `21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135`.
 ### Opção 2: Especificando portas
 Forneça o host alvo e uma lista de portas separadas por vírgulas (sem espaços).
 
 '''bash
 python portscan.py <HOST_ALVO> <PORTAS_COM_VIRGULA>
 # Exemplo: python portscan.py google.com 22,80,443,8080
+
+### **Detalhes Técnicos Importantes**
+
+* A varredura usa `socket.connect_ex()`. Um retorno de código `0` indica que a porta está aberta.
+* O *timeout* é definido como `0.5` segundos por tentativa.
+* Se nenhuma porta for fornecida, a lista padrão inclui: `21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135`.
