@@ -19,8 +19,8 @@ Esta ferramenta usa apenas a biblioteca `socket` e `sys` que são nativas do Pyt
 
 1.  Clone o repositório:
     ```bash
-    git clone 
-    cd SeuRepositorio
+    git clone https://github.com/andremonteirodaniel/-Port-Scanner.git
+    cd -Port-Scanner
 
 ## 🚀 Uso
 
