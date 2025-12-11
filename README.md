@@ -31,3 +31,11 @@ Forneça apenas o host alvo. A lista de portas padrão será utilizada.
 ```bash
 python portscan.py <HOST_ALVO>
 # Exemplo: python portscan.py google.com
+
+
+### Opção 2: Especificando portas
+Forneça o host alvo e uma lista de portas separadas por vírgulas (sem espaços).
+
+'''bash
+python portscan.py <HOST_ALVO> <PORTAS_COM_VIRGULA>
+# Exemplo: python portscan.py google.com 22,80,443,8080
