@@ -39,7 +39,7 @@ Forneça o host alvo e uma lista de portas separadas por vírgulas (sem espaços
 python portscan.py <HOST_ALVO> <PORTAS_COM_VIRGULA>
 # Exemplo: python portscan.py google.com 22,80,443,8080
 
-### **Detalhes Técnicos Importantes**
+### Detalhes Técnicos Importantes
 
 * A varredura usa `socket.connect_ex()`. Um retorno de código `0` indica que a porta está aberta.
 * O *timeout* é definido como `0.5` segundos por tentativa.
