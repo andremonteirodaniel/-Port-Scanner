@@ -1,5 +1,4 @@
-Port-Scanner
-markdown
+
 Port Scanner Simples (TCP)
 
 Um script de varredura de portas em Python usando a biblioteca `socket` nativa. Ele verifica a disponibilidade de portas TCP em um host alvo, ajudando a identificar serviços em execução.
