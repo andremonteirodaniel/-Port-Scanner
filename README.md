@@ -39,6 +39,7 @@ python portscan.py <TARGET_HOST>
 Provide the target host and a comma-separated list of ports (no spaces).
 
 '''bash
+
 python portscan.py <TARGET_HOST> <COMMA_PORTS>
 
 Example: python portscan.py google.com 22,80,443,8080
