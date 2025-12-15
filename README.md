@@ -1,45 +1,52 @@
 
-Port Scanner Simples (TCP)
+Simple Port Scanner (TCP)
 
-Um script de varredura de portas em Python usando a biblioteca `socket` nativa. Ele verifica a disponibilidade de portas TCP em um host alvo, ajudando a identificar serviços em execução.
+A Python port scanning script using the native `socket` library. It checks the availability of TCP ports on a target host, helping to identify running services.
 
-Funcionalidades
+Features
 
-Varredura TCP: Utiliza `socket.connect_ex` para tentar a conexão com portas específicas, ideal para varredura rápida.
-Timeout Configurado:** Define um timeout de 0.5 segundos para cada tentativa de conexão para otimizar a velocidade.
-Portas Padrão: Se nenhuma porta for especificada, ele varre uma lista de portas comuns (21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135).
-Saída Simples: Imprime a porta com o status "[+] <PORTA> open" se a conexão for bem-sucedida (código de retorno 0).
+TCP Scanning: Uses `socket.connect_ex` to attempt connections to specific ports, ideal for quick scanning.
+Configured Timeout:** Sets a timeout of 0.5 seconds for each connection attempt to optimize speed.
+Default Ports: If no port is specified, it scans a list of common ports (21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135).
+Simple Output: Prints the port with the status "[+] <PORT> open" if the connection is successful (return code 0).
 
-Pré-requisitos
+Prerequisites
 
-Esta ferramenta usa apenas a biblioteca `socket` e `sys` que são nativas do Python. Nenhuma instalação adicional é necessária.
+This tool uses only the `socket` and `sys` libraries, which are native to Python. No additional installation is required.
 
-Instalação
+Installation
 
-1.  Clone o repositório:
-    bash
-    git clone https://github.com/andremonteirodaniel/-Port-Scanner.git
-    cd -Port-Scanner
+1. Clone the repository:
 
-    Uso
+bash
 
-    Opção 1: Usando portas padrão
+git clone https://github.com/andremonteirodaniel/-Port-Scanner.git
 
-Forneça apenas o host alvo. A lista de portas padrão será utilizada.
+cd -Port-Scanner
 
-```bash
-python portscan.py <HOST_ALVO>
-# Exemplo: python portscan.py google.com
+Usage
 
-### Opção 2: Especificando portas
-Forneça o host alvo e uma lista de portas separadas por vírgulas (sem espaços).
+Option 1: Using default ports
+
+Provide only the target host. The default port list will be used.
+
+``bash
+python portscan.py <TARGET_HOST>
+
+  Example: python portscan.py google.com
+
+ Option 2: Specifying ports
+Provide the target host and a comma-separated list of ports (no spaces).
 
 '''bash
-python portscan.py <HOST_ALVO> <PORTAS_COM_VIRGULA>
-# Exemplo: python portscan.py google.com 22,80,443,8080
+python portscan.py <TARGET_HOST> <COMMA_PORTS>
 
-  Detalhes Técnicos Importantes
+Example: python portscan.py google.com 22,80,443,8080
 
-  A varredura usa `socket.connect_ex()`. Um retorno de código `0` indica que a porta está aberta.
-  O *timeout* é definido como `0.5` segundos por tentativa.
-  Se nenhuma porta for fornecida, a lista padrão inclui: `21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135`.
+Important Technical Details
+
+The scan uses `socket.connect_ex()`. A return code of `0` indicates that the port is open.
+
+The timeout is set to `0.5` seconds per attempt.
+
+If no port is provided, the default list includes: `21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135`.
