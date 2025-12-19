@@ -6,7 +6,7 @@ A Python port scanning script using the native `socket` library. It checks the a
 Features
 
 TCP Scanning: Uses `socket.connect_ex` to attempt connections to specific ports, ideal for quick scanning.
-Configured Timeout:** Sets a timeout of 0.5 seconds for each connection attempt to optimize speed.
+Configured Timeout: Sets a timeout of 0.5 seconds for each connection attempt to optimize speed.
 Default Ports: If no port is specified, it scans a list of common ports (21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135).
 Simple Output: Prints the port with the status "[+] <PORT> open" if the connection is successful (return code 0).
 
